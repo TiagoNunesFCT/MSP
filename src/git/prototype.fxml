@@ -29,7 +29,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </VBox.margin>
                   </Button>
-                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="62.0" prefWidth="216.0" style="-fx-background-color: #333333;" text="Register" textFill="WHITE">
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#registerButtonClicked" prefHeight="62.0" prefWidth="216.0" style="-fx-background-color: #333333;" text="Register" textFill="WHITE">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </VBox.margin>

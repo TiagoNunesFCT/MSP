@@ -1,5 +1,9 @@
 package git;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,10 +13,45 @@ import javafx.stage.Stage;
 public class Main extends Application{
 
 	public void start(Stage primaryStage) throws Exception {
-		Parent root = FXMLLoader.load(getClass().getResource("prototype.fxml"));
+		
+		File file = new File ("src/git/config.txt"); 
+		Scanner s = null ;
+		
+		s = new Scanner(file);
+		ArrayList<String> fileLines = new ArrayList<String>();
+
+		while  ( s.hasNextLine())  { 
+			String line = s.nextLine();  	// We keep the line on a String 
+			fileLines.add(line);
+		}
+		s.close ();
+		
+		
+		int isLogged = listGet.get(fileLines, "isLogged");
+		if (isLogged < 0) throw new NullPointerException();
+		String username = fileLines.get(isLogged+1);
+		if(username == "null") {
+		
+		Parent mainRoot = FXMLLoader.load(getClass().getResource("prototype.fxml"));
+		
+		
+		Scene mainPage = new Scene(mainRoot, 1000, 600);
+
+		
 		primaryStage.setTitle("Genealogika");
-		primaryStage.setScene(new Scene(root, 1000, 600));
+		primaryStage.setScene(mainPage);
 		primaryStage.show();
+		}else {
+			Parent homeRoot = FXMLLoader.load(getClass().getResource("prototype.fxml"));
+			
+			
+			Scene homePage = new Scene(homeRoot, 1000, 600);
+
+			
+			primaryStage.setTitle("Genealogika Home Page");
+			primaryStage.setScene(homePage);
+			primaryStage.show();
+		}
 	}
 	
 	
