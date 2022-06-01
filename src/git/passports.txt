@@ -1,0 +1,15 @@
+name, datebirth, city
+
+startPassports
+Miguel Guimarães@@1922@@Lisbon
+Salvador Timóteo@@1958@@Lisbon
+Garça Fernandes@@1939@@Lisbon
+Tomás Benedito@@1944@@Porto
+Jorge Santana@@1973@@Porto
+Matilde Guimarães@@1973@@Lisbon
+Carlos Massa@@1973@@Porto
+José Calimoiro@@1958@@Lisbon
+Manuel Garcia@@1922@@Lisbon
+Hervé Tauvennager@@1944@@Porto
+Maria Ramalho@@1939@@Lisbon
+endPassports
