@@ -1,5 +1,6 @@
 package git;
 
+import java.io.FileWriter;
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
@@ -9,25 +10,44 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Controller {
+public class HomepageController {
 
 	
-	public void loginButtonClicked(ActionEvent event) throws IOException {
-		Parent loginRoot = FXMLLoader.load(getClass().getResource("login.fxml"));
-		Scene Login = new Scene(loginRoot, 400, 600);
-		Stage loginStage =  new Stage();
+	public void logoutButtonClicked(ActionEvent event) throws IOException {
 		
-		loginStage.setTitle("Log In");
-		loginStage.setScene(Login);
-		loginStage.show();
+		FileWriter file =  null ; 
+
+
+		file =  new  FileWriter ( "src/git/config.txt" );
+
+		// Write line by line in the file 
+
+			file.write("isLogged" + '\n' ); 
+			file.write("null" + '\n' ); 
+
+		file.close();
+		
+		
+
+		Stage primaryStage =  new Stage();
+		Parent mainRoot = FXMLLoader.load(getClass().getResource("prototype.fxml"));
+		
+		
+		Scene mainPage = new Scene(mainRoot, 1000, 600);
+
+		
+		primaryStage.setTitle("Genealogika");
+		primaryStage.setScene(mainPage);
+		primaryStage.show();
+
 		Stage currentStage = (Stage)((Node) event.getSource()).getScene().getWindow();
 		currentStage.close();
 		
 	}
 	
 	public void registerButtonClicked(ActionEvent event) throws IOException {
-		Parent registerRoot = FXMLLoader.load(getClass().getResource("register.fxml"));
-		Scene Register = new Scene(registerRoot, 400, 600);
+		Parent registerRoot = FXMLLoader.load(getClass().getResource("prototype.fxml"));
+		Scene Register = new Scene(registerRoot, 600, 600);
 		Stage registerStage =  new Stage();
 		
 		registerStage.setTitle("Register");

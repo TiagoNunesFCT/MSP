@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="git.HomepageController">
+   <top>
+      <HBox alignment="TOP_CENTER" prefHeight="122.0" prefWidth="1000.0" style="-fx-background-color: #2E7C62;" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="122.0" prefWidth="785.0" text="Homepage" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="52.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets left="100.0" />
+               </padding>
+            </Label>
+            <VBox alignment="TOP_RIGHT" prefHeight="122.0" prefWidth="220.0">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#logoutButtonClicked" prefHeight="62.0" prefWidth="216.0" style="-fx-background-color: #333333;" text="Log Out" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="52.0" prefWidth="224.0" text="username@username.com" textAlignment="CENTER" textFill="WHITE" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <Label text="What do you want to know about?" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="64.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #222222;">
+               <children>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #2E7C62;" text="Search" textAlignment="CENTER" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button layoutX="478.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: #2E7C62;" text="Parish Records" textAlignment="CENTER" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button layoutX="504.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: #2E7C62;" text="Passports" textAlignment="CENTER" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button layoutX="599.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: #2E7C62;" text="DNA Alert" textAlignment="CENTER" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button layoutX="660.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: #2E7C62;" text="Latest Tree Changes" textAlignment="CENTER" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button layoutX="690.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: #2E7C62;" text="Find Famous People" textAlignment="CENTER" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

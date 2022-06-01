@@ -7,7 +7,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane minHeight="600.0" minWidth="400.0" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="git.LoginController">
+<BorderPane minHeight="600.0" minWidth="400.0" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="git.RegisterController">
    <top>
       <HBox alignment="TOP_CENTER" prefHeight="122.0" prefWidth="1000.0" style="-fx-background-color: #2E7C62;" BorderPane.alignment="CENTER">
          <children>
@@ -25,9 +25,14 @@
    <center>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="TOP_CENTER">
          <children>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #222222;">
+               <children>
+                  <TextField fx:id="nameField" prefHeight="31.0" prefWidth="250.0" promptText="First and Last Name" />
+               </children>
+            </HBox>
             <HBox alignment="CENTER" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #222222;">
                <children>
-                  <TextField fx:id="usernameField" prefHeight="31.0" prefWidth="250.0" promptText="Username" />
+                  <TextField fx:id="usernameField" prefHeight="31.0" prefWidth="250.0" promptText="E-Mail" />
                </children>
             </HBox>
             <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #222222;">
@@ -41,12 +46,12 @@
    <bottom>
       <VBox alignment="CENTER" prefHeight="122.0" prefWidth="220.0" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="CENTER" mnemonicParsing="false" onAction="#loginButtonClicked" prefHeight="62.0" prefWidth="216.0" style="-fx-background-color: #333333;" text="Log In" textFill="WHITE">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#registerButtonClicked" prefHeight="62.0" prefWidth="216.0" style="-fx-background-color: #333333;" text="Register" textFill="WHITE">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" onAction="#registerButtonClicked" prefHeight="62.0" prefWidth="216.0" style="-fx-background-color: #333333;" text="Register" textFill="WHITE">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#loginButtonClicked" prefHeight="62.0" prefWidth="216.0" style="-fx-background-color: #333333;" text="Log In" textFill="WHITE">
                <VBox.margin>
                   <Insets bottom="5.0" />
                </VBox.margin>

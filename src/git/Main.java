@@ -30,7 +30,7 @@ public class Main extends Application{
 		int isLogged = listGet.get(fileLines, "isLogged");
 		if (isLogged < 0) throw new NullPointerException();
 		String username = fileLines.get(isLogged+1);
-		if(username == "null") {
+		if(username.toLowerCase().trim().equals( "null")) {
 		
 		Parent mainRoot = FXMLLoader.load(getClass().getResource("prototype.fxml"));
 		
@@ -42,13 +42,13 @@ public class Main extends Application{
 		primaryStage.setScene(mainPage);
 		primaryStage.show();
 		}else {
-			Parent homeRoot = FXMLLoader.load(getClass().getResource("prototype.fxml"));
+			Parent homeRoot = FXMLLoader.load(getClass().getResource("homepage.fxml"));
 			
 			
 			Scene homePage = new Scene(homeRoot, 1000, 600);
 
 			
-			primaryStage.setTitle("Genealogika Home Page");
+			primaryStage.setTitle(username+"'s HomePage");
 			primaryStage.setScene(homePage);
 			primaryStage.show();
 		}
