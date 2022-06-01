@@ -29,7 +29,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </VBox.margin>
                   </Button>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="52.0" prefWidth="224.0" text="username@username.com" textAlignment="CENTER" textFill="WHITE" />
+                  <Label fx:id="usernameString" alignment="CENTER" contentDisplay="CENTER" prefHeight="52.0" prefWidth="224.0" text="username@username.com" textAlignment="CENTER" textFill="WHITE" />
                </children>
             </VBox>
          </children>

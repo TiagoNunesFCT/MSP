@@ -52,6 +52,19 @@ public class LoginController {
 		
 		boolean i = checkNameAndPass(usernameField.getText(), passwordField.getText());
 		if(i) {
+			
+			FileWriter file =  null ; 
+
+
+			file =  new  FileWriter ( "src/git/config.txt" );
+
+			// Write line by line in the file 
+
+				file.write("isLogged" + '\n' ); 
+				file.write(usernameField.getText().toLowerCase()+ '\n' ); 
+
+			file.close();
+			
 			Parent homeRoot = FXMLLoader.load(getClass().getResource("homepage.fxml"));
 			
 			
@@ -62,17 +75,7 @@ public class LoginController {
 			homeStage.setScene(homePage);
 			homeStage.show();
 			
-			FileWriter file =  null ; 
 
-
-				file =  new  FileWriter ( "src/git/config.txt" );
-
-				// Write line by line in the file 
-
-					file.write("isLogged" + '\n' ); 
-					file.write(usernameField.getText().toLowerCase()+ '\n' ); 
-
-				file.close();
 			
 		}else {
 		

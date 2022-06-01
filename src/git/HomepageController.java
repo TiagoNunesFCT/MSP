@@ -1,17 +1,56 @@
 package git;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class HomepageController {
+	
+	@FXML
+	private Label usernameString;
+	
+	private String username;
+	
+	public HomepageController() throws FileNotFoundException {
+		File file = new File ("src/git/config.txt"); 
+		Scanner s = null ;
+		
+		s = new Scanner(file);
+		ArrayList<String> fileLines = new ArrayList<String>();
 
+		while  ( s.hasNextLine())  { 
+			String line = s.nextLine();  	// We keep the line on a String 
+			fileLines.add(line);
+		}
+		s.close ();
+		
+		
+		int isLogged = listGet.get(fileLines, "isLogged");
+		if (isLogged < 0) throw new NullPointerException();
+		username = fileLines.get(isLogged+1);
+		
+		usernameString = new Label(username);
+	}
+
+	
+	
+	public void initialize() throws FileNotFoundException {
+
+		usernameString.setText(username);
+
+	}
 	
 	public void logoutButtonClicked(ActionEvent event) throws IOException {
 		
