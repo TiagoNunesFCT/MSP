@@ -100,7 +100,7 @@ public class HomepageController {
 	}
 	
 	public void searchButtonClicked(ActionEvent event) throws IOException {
-		Parent searchRoot = FXMLLoader.load(getClass().getResource("prototype.fxml"));
+		Parent searchRoot = FXMLLoader.load(getClass().getResource("search.fxml"));
 		Scene Search = new Scene(searchRoot, 1000, 600);
 		Stage searchStage =  new Stage();
 		
