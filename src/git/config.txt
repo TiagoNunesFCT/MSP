@@ -1,2 +1,2 @@
 isLogged
-null
+aaa

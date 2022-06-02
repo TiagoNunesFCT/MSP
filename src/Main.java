@@ -1,4 +1,4 @@
-package git;
+
 
 import java.io.File;
 import java.util.ArrayList;
@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import git.*;
 
 
 public class Main extends Application{
@@ -33,7 +34,7 @@ public class Main extends Application{
 		String username = fileLines.get(isLogged+1);
 		if(username.toLowerCase().trim().equals( "null")) {
 		
-		Parent mainRoot = FXMLLoader.load(getClass().getResource("prototype.fxml"));
+		Parent mainRoot = FXMLLoader.load(getClass().getResource("/git/prototype.fxml"));
 		
 		
 		Scene mainPage = new Scene(mainRoot, 1000, 600);
@@ -43,7 +44,7 @@ public class Main extends Application{
 		primaryStage.setScene(mainPage);
 		primaryStage.show();
 		}else {
-			Parent homeRoot = FXMLLoader.load(getClass().getResource("homepage.fxml"));
+			Parent homeRoot = FXMLLoader.load(getClass().getResource("/git/homepage.fxml"));
 			
 			
 			Scene homePage = new Scene(homeRoot, 1000, 600);
