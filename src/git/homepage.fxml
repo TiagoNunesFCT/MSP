@@ -40,22 +40,25 @@
          <children>
             <Label text="What do you want to know about?" textFill="WHITE">
                <font>
-                  <Font name="Segoe UI" size="64.0" />
+                  <Font name="Segoe UI" size="62.0" />
                </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
             </Label>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #222222;">
                <children>
-                  <Button mnemonicParsing="false" style="-fx-background-color: #2E7C62;" text="Search" textAlignment="CENTER" textFill="WHITE">
+                  <Button mnemonicParsing="false" onAction="#searchButtonClicked" style="-fx-background-color: #2E7C62;" text="Search" textAlignment="CENTER" textFill="WHITE">
                      <HBox.margin>
                         <Insets left="20.0" right="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button layoutX="478.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: #2E7C62;" text="Parish Records" textAlignment="CENTER" textFill="WHITE">
+                  <Button layoutX="478.0" layoutY="45.0" mnemonicParsing="false" onAction="#parishButtonClicked" style="-fx-background-color: #2E7C62;" text="Parish Records" textAlignment="CENTER" textFill="WHITE">
                      <HBox.margin>
                         <Insets left="20.0" right="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button layoutX="504.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: #2E7C62;" text="Passports" textAlignment="CENTER" textFill="WHITE">
+                  <Button layoutX="504.0" layoutY="45.0" mnemonicParsing="false" onAction="#passportButtonClicked" style="-fx-background-color: #2E7C62;" text="Passports" textAlignment="CENTER" textFill="WHITE">
                      <HBox.margin>
                         <Insets left="20.0" right="20.0" />
                      </HBox.margin>
@@ -65,7 +68,7 @@
                         <Insets left="20.0" right="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button layoutX="660.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: #2E7C62;" text="Latest Tree Changes" textAlignment="CENTER" textFill="WHITE">
+                  <Button layoutX="660.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: #2E7C62;" text="Family Tree Management" textAlignment="CENTER" textFill="WHITE">
                      <HBox.margin>
                         <Insets left="20.0" right="20.0" />
                      </HBox.margin>

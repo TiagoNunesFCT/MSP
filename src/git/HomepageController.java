@@ -84,17 +84,7 @@ public class HomepageController {
 		
 	}
 	
-	public void registerButtonClicked(ActionEvent event) throws IOException {
-		Parent registerRoot = FXMLLoader.load(getClass().getResource("prototype.fxml"));
-		Scene Register = new Scene(registerRoot, 600, 600);
-		Stage registerStage =  new Stage();
-		
-		registerStage.setTitle("Register");
-		registerStage.setScene(Register);
-		registerStage.show();
-		Stage currentStage = (Stage)((Node) event.getSource()).getScene().getWindow();
-		currentStage.close();
-	}
+
 	
 	public void backButtonClicked(ActionEvent event) throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("prototype.fxml"));
@@ -108,4 +98,41 @@ public class HomepageController {
 		currentStage.close();
 		
 	}
+	
+	public void searchButtonClicked(ActionEvent event) throws IOException {
+		Parent searchRoot = FXMLLoader.load(getClass().getResource("prototype.fxml"));
+		Scene Search = new Scene(searchRoot, 1000, 600);
+		Stage searchStage =  new Stage();
+		
+		searchStage.setTitle("Search Relatives");
+		searchStage.setScene(Search);
+		searchStage.show();
+		Stage currentStage = (Stage)((Node) event.getSource()).getScene().getWindow();
+		currentStage.close();
+	}
+	
+	public void parishButtonClicked(ActionEvent event) throws IOException {
+		Parent parishRoot = FXMLLoader.load(getClass().getResource("parishSearch.fxml"));
+		Scene Parish = new Scene(parishRoot, 1000, 600);
+		Stage parishStage =  new Stage();
+		
+		parishStage.setTitle("Search Parish Records");
+		parishStage.setScene(Parish);
+		parishStage.show();
+		Stage currentStage = (Stage)((Node) event.getSource()).getScene().getWindow();
+		currentStage.close();
+	}
+
+	public void passportButtonClicked(ActionEvent event) throws IOException {
+		Parent passportRoot = FXMLLoader.load(getClass().getResource("passportSearch.fxml"));
+		Scene Passport = new Scene(passportRoot, 1000, 600);
+		Stage passportStage =  new Stage();
+		
+		passportStage.setTitle("Search Passports");
+		passportStage.setScene(Passport);
+		passportStage.show();
+		Stage currentStage = (Stage)((Node) event.getSource()).getScene().getWindow();
+		currentStage.close();
+	}
+	
 }
