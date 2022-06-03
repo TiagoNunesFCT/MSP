@@ -108,14 +108,14 @@ public class TreeManagementController {
 	
 
 	
-	public void searchButtonClicked(ActionEvent event) throws IOException {
-		Parent searchRoot = FXMLLoader.load(getClass().getResource("search.fxml"));
-		Scene Search = new Scene(searchRoot, 1000, 600);
-		Stage searchStage =  new Stage();
+	public void addButtonClicked(ActionEvent event) throws IOException {
+		Parent addRoot = FXMLLoader.load(getClass().getResource("addRelationship.fxml"));
+		Scene Add = new Scene(addRoot, 1000, 600);
+		Stage addStage =  new Stage();
 		
-		searchStage.setTitle("Search Relatives");
-		searchStage.setScene(Search);
-		searchStage.show();
+		addStage.setTitle("AddRelationship");
+		addStage.setScene(Add);
+		addStage.show();
 		Stage currentStage = (Stage)((Node) event.getSource()).getScene().getWindow();
 		currentStage.close();
 	}

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="git.AddRelationshipController">
+   <top>
+      <HBox alignment="TOP_CENTER" prefHeight="122.0" prefWidth="1000.0" style="-fx-background-color: #2E7C62;" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="122.0" prefWidth="785.0" text="Add Relationship" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="52.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets left="100.0" />
+               </padding>
+            </Label>
+            <VBox alignment="TOP_RIGHT" prefHeight="122.0" prefWidth="220.0">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="62.0" prefWidth="216.0" style="-fx-background-color: #333333;" text="Back" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <Label text="Browse through our genealogic database" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="48.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #222222;">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addButtonClicked" style="-fx-background-color: #2E7C62;" text="Add" textAlignment="CENTER" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Full Name">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="siblingNameField" promptText="Full Name" text="John Doe">
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Sibling">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Button mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="You" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Text fill="WHITE" layoutX="719.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spouse">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Button layoutX="770.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="Unavailable" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="68.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #222222;">
+               <children>
+                  <Text fill="WHITE" layoutX="719.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Birth">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Button layoutX="770.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="1957" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Text fill="WHITE" layoutX="796.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Death">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Button layoutX="850.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="2004" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

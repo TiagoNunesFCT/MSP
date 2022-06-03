@@ -58,7 +58,7 @@
             </StackPane>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #222222;">
                <children>
-                  <Button layoutX="504.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: #2E7C62;" text="Add Relationship" textAlignment="CENTER" textFill="WHITE">
+                  <Button layoutX="504.0" layoutY="45.0" mnemonicParsing="false" onAction="#addButtonClicked" style="-fx-background-color: #2E7C62;" text="Add Relationship" textAlignment="CENTER" textFill="WHITE">
                      <HBox.margin>
                         <Insets left="20.0" right="20.0" />
                      </HBox.margin>

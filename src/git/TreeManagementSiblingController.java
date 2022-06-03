@@ -158,40 +158,6 @@ public class TreeManagementSiblingController {
 		currentStage.close();
 	}
 	
-	public void parishButtonClicked(ActionEvent event) throws IOException {
-		Parent parishRoot = FXMLLoader.load(getClass().getResource("parishSearch.fxml"));
-		Scene Parish = new Scene(parishRoot, 1000, 600);
-		Stage parishStage =  new Stage();
-		
-		parishStage.setTitle("Search Parish Records");
-		parishStage.setScene(Parish);
-		parishStage.show();
-		Stage currentStage = (Stage)((Node) event.getSource()).getScene().getWindow();
-		currentStage.close();
-	}
 
-	public void passportButtonClicked(ActionEvent event) throws IOException {
-		Parent passportRoot = FXMLLoader.load(getClass().getResource("passportSearch.fxml"));
-		Scene Passport = new Scene(passportRoot, 1000, 600);
-		Stage passportStage =  new Stage();
-		
-		passportStage.setTitle("Search Passports");
-		passportStage.setScene(Passport);
-		passportStage.show();
-		Stage currentStage = (Stage)((Node) event.getSource()).getScene().getWindow();
-		currentStage.close();
-	}
-	
-	public void dnaAlertButtonClicked(ActionEvent event) throws IOException {
-		Parent alertRoot = FXMLLoader.load(getClass().getResource("DNA Alert.fxml"));
-		Scene Alert = new Scene(alertRoot, 1000, 600);
-		Stage alertStage =  new Stage();
-		
-		alertStage.setTitle("Find Famous People");
-		alertStage.setScene(Alert);
-		alertStage.show();
-		Stage currentStage = (Stage)((Node) event.getSource()).getScene().getWindow();
-		currentStage.close();
-	}
 	
 }
