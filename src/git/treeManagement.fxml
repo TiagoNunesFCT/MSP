@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="git.TreeManagementController">
+   <top>
+      <HBox alignment="TOP_CENTER" prefHeight="122.0" prefWidth="1000.0" style="-fx-background-color: #2E7C62;" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="122.0" prefWidth="785.0" text="Homepage" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="52.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets left="100.0" />
+               </padding>
+            </Label>
+            <VBox alignment="TOP_RIGHT" prefHeight="122.0" prefWidth="220.0">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="62.0" prefWidth="216.0" style="-fx-background-color: #333333;" text="Back" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Label fx:id="usernameString" alignment="CENTER" contentDisplay="CENTER" prefHeight="52.0" prefWidth="224.0" text="username@username.com" textAlignment="CENTER" textFill="WHITE" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="876.0" text="What do you want to know about?" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="50.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <StackPane alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="357.0" fitWidth="388.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@tree%20before.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="userFirstNameString" alignment="CENTER" prefHeight="53.0" prefWidth="52.0" text="Label" />
+               </children>
+            </StackPane>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #222222;">
+               <children>
+                  <Button layoutX="504.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: #2E7C62;" text="Add Relationship" textAlignment="CENTER" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button layoutX="599.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: #2E7C62;" text="Latest Changes" textAlignment="CENTER" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

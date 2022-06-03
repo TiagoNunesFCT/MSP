@@ -7,7 +7,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="git.HomepageController">
+<BorderPane minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="git.FamousPersonController">
    <top>
       <HBox alignment="TOP_CENTER" prefHeight="122.0" prefWidth="1000.0" style="-fx-background-color: #2E7C62;" BorderPane.alignment="CENTER">
          <children>
@@ -24,7 +24,7 @@
             </Label>
             <VBox alignment="TOP_RIGHT" prefHeight="122.0" prefWidth="220.0">
                <children>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#logoutButtonClicked" prefHeight="62.0" prefWidth="216.0" style="-fx-background-color: #333333;" text="Back" textFill="WHITE">
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="62.0" prefWidth="216.0" style="-fx-background-color: #333333;" text="Back" textFill="WHITE">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </VBox.margin>

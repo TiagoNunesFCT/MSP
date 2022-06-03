@@ -1,9 +1,35 @@
 plugins {
-    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+    id 'org.beryx.runtime' version '1.11.3'
 }
 
-jar {
- manifest {
- attributes 'Main-Class': 'Main'
- }
- }
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+application {
+    mainClassName = "Main"
+    applicationName = 'hellofx'
+}
+
+runtime {
+    options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
+    launcher {
+        noConsole = true
+    }
+    jpackage {
+        def currentOs = org.gradle.internal.os.OperatingSystem.current()
+        def imgType = currentOs.windows ? 'ico' : currentOs.macOsX ? 'icns' : 'png'
+        imageOptions += ['--icon', "src/main/resources/hellofx.$imgType"]
+        installerOptions += ['--resource-dir', "src/main/resources"]
+        installerOptions += ['--vendor', 'Acme Corporation']
+        if(currentOs.windows) {
+            installerOptions += ['--win-per-user-install', '--win-dir-chooser', '--win-menu', '--win-shortcut']
+        }
+    }
+}

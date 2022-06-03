@@ -63,17 +63,17 @@
                         <Insets left="20.0" right="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button layoutX="599.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: #2E7C62;" text="DNA Alert" textAlignment="CENTER" textFill="WHITE">
+                  <Button layoutX="599.0" layoutY="45.0" mnemonicParsing="false" onAction="#dnaAlertButtonClicked" style="-fx-background-color: #2E7C62;" text="DNA Alert" textAlignment="CENTER" textFill="WHITE">
                      <HBox.margin>
                         <Insets left="20.0" right="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button layoutX="660.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: #2E7C62;" text="Family Tree Management" textAlignment="CENTER" textFill="WHITE">
+                  <Button layoutX="660.0" layoutY="45.0" mnemonicParsing="false" onAction="#treeManageButtonClicked" style="-fx-background-color: #2E7C62;" text="Family Tree Management" textAlignment="CENTER" textFill="WHITE">
                      <HBox.margin>
                         <Insets left="20.0" right="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button layoutX="690.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: #2E7C62;" text="Find Famous People" textAlignment="CENTER" textFill="WHITE">
+                  <Button layoutX="690.0" layoutY="45.0" mnemonicParsing="false" onAction="#famousButtonClicked" style="-fx-background-color: #2E7C62;" text="Find Famous People" textAlignment="CENTER" textFill="WHITE">
                      <HBox.margin>
                         <Insets left="20.0" right="20.0" />
                      </HBox.margin>

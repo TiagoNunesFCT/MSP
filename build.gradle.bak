@@ -4,6 +4,6 @@ plugins {
 
 jar {
  manifest {
- attributes 'Main-Class': 'git.Main'
+ attributes 'Main-Class': 'Main'
  }
  }

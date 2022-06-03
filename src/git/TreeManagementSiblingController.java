@@ -16,14 +16,21 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-public class HomepageController {
+public class TreeManagementSiblingController {
 	
 	@FXML
 	private Label usernameString;
+	@FXML
+	private Label userFirstNameString;
+	
+	@FXML
+	private Label siblingString;
 	
 	private String username;
+	private String userFirstName;
+	private String siblingName;
 	
-	public HomepageController() throws FileNotFoundException {
+	public TreeManagementSiblingController() throws Exception {
 		File file = new File ("src/git/config.txt"); 
 		Scanner s = null ;
 		
@@ -40,20 +47,42 @@ public class HomepageController {
 		int isLogged = listGet.get(fileLines, "isLogged");
 		if (isLogged < 0) throw new NullPointerException();
 		username = fileLines.get(isLogged+1);
+		userFirstName = getName();
+		siblingName = getSibling();
+		
+		
 		
 		usernameString = new Label(username);
+		userFirstNameString = new Label(userFirstName);
+		siblingString = new Label(siblingName);
 	}
 
 	
 	
-	public void initialize() throws FileNotFoundException {
+	private String getName() throws Exception {
+		File file = new File("src/git/users.txt");
+		Scanner s = null;
 
-		usernameString.setText(username);
+		s = new Scanner(file);
+		ArrayList<String> fileLines = new ArrayList<String>();
 
+		while (s.hasNextLine()) {
+			String line = s.nextLine(); // We keep the line on a String
+			fileLines.add(line);
+		}
+		s.close();
+		int indexS = listGet.get(fileLines, "startUsers");
+		int indexE = listGet.get(fileLines, "endUsers");
+		for (int i = indexS + 1; i < indexE; i++) {
+			String[] current = fileLines.get(i).split("@@");
+			if (current[0].toLowerCase().equals(username.toLowerCase())) {
+				return current[2];
+			}
+		}
+		return "John";
 	}
 	
-	
-	private boolean hasSibling() throws Exception {
+	private String getSibling() throws Exception {
 		File file = new File("src/git/trees.txt");
 		Scanner s = null;
 
@@ -69,58 +98,41 @@ public class HomepageController {
 		for (int i = indexS + 1; i < fileLines.size(); i++) {
 			String[] current = fileLines.get(i).split("@@");
 			if (current[0].toLowerCase().equals(username.toLowerCase())) {
-				return true;
+				return current[1];
 			}
 		}
-		return false;
+		return "John";
 	}
 	
-	public void logoutButtonClicked(ActionEvent event) throws IOException {
-		
-		FileWriter file =  null ; 
-
-
-		file =  new  FileWriter ( "src/git/config.txt" );
-
-		// Write line by line in the file 
-
-			file.write("isLogged" + '\n' ); 
-			file.write("null" + '\n' ); 
-
-		file.close();
-		
-		
-
-		Stage primaryStage =  new Stage();
-		Parent mainRoot = FXMLLoader.load(getClass().getResource("prototype.fxml"));
-		
-		
-		Scene mainPage = new Scene(mainRoot, 1000, 600);
-
-		
-		primaryStage.setTitle("Genealogika");
-		primaryStage.setScene(mainPage);
-		primaryStage.show();
-
-		Stage currentStage = (Stage)((Node) event.getSource()).getScene().getWindow();
-		currentStage.close();
-		
-	}
 	
+	public void initialize() throws FileNotFoundException {
 
+		usernameString.setText(username);
+		userFirstNameString.setText(userFirstName);
+		siblingString.setText(siblingName);
+
+	}
 	
 	public void backButtonClicked(ActionEvent event) throws IOException {
-		Parent root = FXMLLoader.load(getClass().getResource("prototype.fxml"));
-		Scene scene = new Scene(root, 1000, 600);
-		Stage stage =  new Stage();
 		
-		stage.setTitle("Genealogika");
-		stage.setScene(scene);
-		stage.show();
+		
+		Parent homeRoot = FXMLLoader.load(getClass().getResource("homepage.fxml"));
+		
+		
+		Scene homePage = new Scene(homeRoot, 1000, 600);
+
+		Stage homeStage =  new Stage();
+		homeStage.setTitle(username+"'s HomePage");
+		homeStage.setScene(homePage);
+		homeStage.show();
 		Stage currentStage = (Stage)((Node) event.getSource()).getScene().getWindow();
 		currentStage.close();
 		
 	}
+	
+
+	
+
 	
 	public void searchButtonClicked(ActionEvent event) throws IOException {
 		Parent searchRoot = FXMLLoader.load(getClass().getResource("search.fxml"));
@@ -175,25 +187,11 @@ public class HomepageController {
 		Scene Alert = new Scene(alertRoot, 1000, 600);
 		Stage alertStage =  new Stage();
 		
-		alertStage.setTitle("Show DNA Alerts");
+		alertStage.setTitle("Find Famous People");
 		alertStage.setScene(Alert);
 		alertStage.show();
 		Stage currentStage = (Stage)((Node) event.getSource()).getScene().getWindow();
 		currentStage.close();
 	}
 	
-	
-	public void treeManageButtonClicked(ActionEvent event) throws Exception {
-
-		Parent treeManageRoot = hasSibling()? FXMLLoader.load(getClass().getResource("treeManagementSibling.fxml")):FXMLLoader.load(getClass().getResource("treeManagement.fxml"));
-
-		Scene TreeManage = new Scene(treeManageRoot, 1000, 600);
-		Stage treeManageStage =  new Stage();
-		
-		treeManageStage.setTitle("Tree Management");
-		treeManageStage.setScene(TreeManage);
-		treeManageStage.show();
-		Stage currentStage = (Stage)((Node) event.getSource()).getScene().getWindow();
-		currentStage.close();
-	}
 }
