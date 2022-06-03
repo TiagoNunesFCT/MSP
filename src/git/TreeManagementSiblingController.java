@@ -134,29 +134,19 @@ public class TreeManagementSiblingController {
 	
 
 	
-	public void searchButtonClicked(ActionEvent event) throws IOException {
-		Parent searchRoot = FXMLLoader.load(getClass().getResource("search.fxml"));
-		Scene Search = new Scene(searchRoot, 1000, 600);
-		Stage searchStage =  new Stage();
+	public void latestButtonClicked(ActionEvent event) throws IOException {
+		Parent latestRoot = FXMLLoader.load(getClass().getResource("LatestTreeChangesSibling.fxml"));
+		Scene Latest = new Scene(latestRoot, 1000, 600);
+		Stage latestStage =  new Stage();
 		
-		searchStage.setTitle("Search Relatives");
-		searchStage.setScene(Search);
-		searchStage.show();
+		latestStage.setTitle("Latest Tree Changes");
+		latestStage.setScene(Latest);
+		latestStage.show();
 		Stage currentStage = (Stage)((Node) event.getSource()).getScene().getWindow();
 		currentStage.close();
 	}
 	
-	public void famousButtonClicked(ActionEvent event) throws IOException {
-		Parent famousRoot = FXMLLoader.load(getClass().getResource("famousPerson.fxml"));
-		Scene Famous = new Scene(famousRoot, 1000, 600);
-		Stage famousStage =  new Stage();
-		
-		famousStage.setTitle("Find Famous People");
-		famousStage.setScene(Famous);
-		famousStage.show();
-		Stage currentStage = (Stage)((Node) event.getSource()).getScene().getWindow();
-		currentStage.close();
-	}
+
 	
 
 	

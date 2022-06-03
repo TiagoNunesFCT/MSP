@@ -63,7 +63,7 @@
                         <Insets left="20.0" right="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button layoutX="599.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: #2E7C62;" text="Latest Changes" textAlignment="CENTER" textFill="WHITE">
+                  <Button layoutX="599.0" layoutY="45.0" mnemonicParsing="false" onAction="#latestButtonClicked" style="-fx-background-color: #2E7C62;" text="Latest Changes" textAlignment="CENTER" textFill="WHITE">
                      <HBox.margin>
                         <Insets left="20.0" right="20.0" />
                      </HBox.margin>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #222222;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="git.LatestTreeChangesController">
+   <top>
+      <HBox alignment="TOP_CENTER" prefHeight="122.0" prefWidth="1000.0" style="-fx-background-color: #2E7C62;" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="122.0" prefWidth="785.0" text="Latest Tree Changes" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="52.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets left="100.0" />
+               </padding>
+            </Label>
+            <VBox alignment="TOP_RIGHT" prefHeight="122.0" prefWidth="220.0">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="62.0" prefWidth="216.0" style="-fx-background-color: #333333;" text="Back" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <Label text="On the last 30 days:" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="48.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox minHeight="400.0" minWidth="800.0" prefHeight="400.0" prefWidth="100.0">
+                     <children>
+                        <FlowPane alignment="CENTER" prefHeight="41.0" prefWidth="800.0" style="-fx-background-color: #272727; -fx-border-color: #404040;">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label text="Sergei Added" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER" layoutX="10.0" layoutY="15.0" prefHeight="41.0" prefWidth="800.0" style="-fx-background-color: #272727; -fx-border-color: #404040;">
+                           <children>
+                              <Label text="João Added" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </FlowPane.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER" layoutX="10.0" layoutY="61.0" prefHeight="41.0" prefWidth="800.0" style="-fx-background-color: #272727; -fx-border-color: #404040;">
+                           <children>
+                              <Label text="Alex merged their tree to yours" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </FlowPane.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </FlowPane>
+                        <FlowPane alignment="CENTER" layoutX="10.0" layoutY="102.0" prefHeight="41.0" prefWidth="800.0" style="-fx-background-color: #272727; -fx-border-color: #404040;">
+                           <children>
+                              <Label text="António Removed" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <FlowPane.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </FlowPane.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </FlowPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

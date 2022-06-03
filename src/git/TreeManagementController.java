@@ -120,26 +120,14 @@ public class TreeManagementController {
 		currentStage.close();
 	}
 	
-	public void famousButtonClicked(ActionEvent event) throws IOException {
-		Parent famousRoot = FXMLLoader.load(getClass().getResource("famousPerson.fxml"));
-		Scene Famous = new Scene(famousRoot, 1000, 600);
-		Stage famousStage =  new Stage();
+	public void latestButtonClicked(ActionEvent event) throws IOException {
+		Parent latestRoot = FXMLLoader.load(getClass().getResource("LatestTreeChanges.fxml"));
+		Scene Latest = new Scene(latestRoot, 1000, 600);
+		Stage latestStage =  new Stage();
 		
-		famousStage.setTitle("Find Famous People");
-		famousStage.setScene(Famous);
-		famousStage.show();
-		Stage currentStage = (Stage)((Node) event.getSource()).getScene().getWindow();
-		currentStage.close();
-	}
-	
-	public void parishButtonClicked(ActionEvent event) throws IOException {
-		Parent parishRoot = FXMLLoader.load(getClass().getResource("parishSearch.fxml"));
-		Scene Parish = new Scene(parishRoot, 1000, 600);
-		Stage parishStage =  new Stage();
-		
-		parishStage.setTitle("Search Parish Records");
-		parishStage.setScene(Parish);
-		parishStage.show();
+		latestStage.setTitle("Latest Tree Changes");
+		latestStage.setScene(Latest);
+		latestStage.show();
 		Stage currentStage = (Stage)((Node) event.getSource()).getScene().getWindow();
 		currentStage.close();
 	}
